@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
 @import url('../../node_modules/lightbox2/dist/css/lightbox.css');
 
-
 $backgroundColor: #fafafa;
 $textColor: #252525;
 $headerFont: 'Lato', sans-serif;
@@ -10,11 +9,11 @@ $bodyFont: 'Merriweather', serif;
 
 body {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: $bodyFont;
   font-size: 16px;
+  line-height: 1.5;
 
   background-color: $backgroundColor;
   color: $textColor;
@@ -39,22 +38,17 @@ body {
     }
   }
 
-}
+} // END body bracket
 
-.wrapperHeader {
-  // display: flex;
-  // flex-direction: row;
-  // @media screen and (min-width: 1200px) {
-  // }
+.headerWrapper {
   position: fixed;
   top: 0;
   left: 0;
 
   header {
-    // width: 15%;
     height: 100vh;
     background-color: $backgroundColor;
-    padding: 20px 40px;
+    padding: 3rem 40px;
 
     @media screen and (min-width: 1200px) {
       
@@ -63,7 +57,7 @@ body {
     h1 {
       font-size: 2.7rem;
       text-align: center;
-      margin: 3rem 0;
+      margin-bottom: 3rem;
       font-family: $headerFont;
       font-weight: 700;
     }
@@ -105,12 +99,12 @@ body {
           }
         }
       }
-    }
+    } // END ul.menu bracket
 
     ul.social {
       display: flex;
       list-style-type: none;
-      margin: 2rem 0 7rem 0;
+      margin: 2rem 0 3rem 0;
       padding: 0;
       text-align: center;
 
@@ -125,28 +119,28 @@ body {
             transition: all 300ms ease-in-out;
           }
 
-          &:hover{
+          &:hover {
             * {
               color: lighten($textColor, 15%);
             }
           }
         }
       }
-    }
+    } // END ul.social bracket
 
     .copyright {
       font-size: 0.75rem;
       font-family: $bodyFont;
     }
-  }
-}
+  } // END .header bracket
+} // END .headerWrapper bracket
 
 .mainContent {
   // background-color: #c8a62a;
   background-color: $backgroundColor;
-  padding: 20px;
+  padding: 4.5rem 20px 20px 20px;
 
-  .gallery {
+  .wrapper {
     padding: 20px;
 
     div.galleryPhoto {
@@ -169,6 +163,11 @@ body {
       
     }
 
-  }
+  } // END .gallery bracket
   
+} // END .mainContent bracket
+
+a.active{
+  color: red;
+  background-color: red;
 }
