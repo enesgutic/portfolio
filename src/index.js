@@ -6,6 +6,7 @@ import '../public/styles/style.scss'
 import '../public/styles/about.scss'
 import '../public/styles/contact.scss'
 import '../public/styles/landscape.scss'
+import '../public/styles/fashion.scss'
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
@@ -13,7 +14,8 @@ import '@fortawesome/fontawesome-free/js/brands'
 import lightbox from '../node_modules/lightbox2/dist/js/lightbox'
 
 jQuery(() => {
-  // Code goes here
+  
+  // Lightbox functionality
   lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true,
@@ -21,9 +23,8 @@ jQuery(() => {
   })
 
   // OnLoad FadeIn website
-  $(document).ready(function () {
-    $('.hidden').fadeIn(1600).removeClass('hidden');
-  });
+  $('.hidden').fadeIn(1600).removeClass('hidden');
+  
 
 
   // Active link

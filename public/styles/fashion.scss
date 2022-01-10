@@ -1,0 +1,28 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+body {
+  &.fashion .headerWrapper header ul li a[href*="fashion"] {
+    &:before {
+      width: 99%;
+    }
+  }
+}
+
+.fashionWrapper {
+  @include flexStart;
+  flex-wrap: wrap;
+  a {
+    width: 30%;
+    margin: 0 3% 3% 0;
+
+    &:nth-child(4) {
+      width: 100%;
+    }
+
+    &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8){
+      width: 22%;
+    }
+  }
+  
+}

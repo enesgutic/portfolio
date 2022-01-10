@@ -1,6 +1,14 @@
 @import './mixins';
 @import './variables';
 
+body {
+  &.contact .headerWrapper header ul li a[href*="contact"]{
+    &:before {
+      width: 99%;
+    }
+  }
+}
+
 .contactWrapper {
   @include flexStart;
 
@@ -22,13 +30,36 @@
       p {
         margin: 0;
       }
-    }
-  }
+
+      a {
+        @include borderSlideLink;
+        color: $textColor;
+
+        &:before {
+          @include borderSlideLinkBefore;
+          bottom: -3px;
+        }
+
+        &:hover,
+        &:focus {
+          color: lighten($textColor, 20%);
+
+          &:before {
+            width: 99%;
+          }
+        }
+      }
+    } // END .wrapInfo
+  } // END .contactInfo
 
   .contactForm {
     width: 60%;
     padding: 0 20px;
     
+    h2{
+      margin: 0;
+    }
+
     form{
       
       .formBody {
@@ -39,17 +70,22 @@
         div {
           width: 100%;
 
+          label{
+            visibility: hidden;
+          }
+
           input, textarea {
             width: 100%;
             font-family: $headerFont;
             font-size: 1rem;
             padding: 10px 12px;
             border: 1px solid $textColor;
+            box-sizing: border-box;
           }
         }
 
         div:not(:first-of-type) {
-          margin-top: 1rem;
+          margin-top: 0rem;
         }
 
         input[type=submit] {
@@ -59,6 +95,7 @@
           background-color: $backgroundColor;
           border: 1px solid $textColor;
           font-size: 1rem;
+          text-transform: uppercase;
           transition: all .3s ease-in-out;
         }
 

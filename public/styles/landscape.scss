@@ -1,12 +1,19 @@
 @import './mixins';
 @import './variables';
 
+body {
+  &.landscape .headerWrapper header ul li a[href*="landscape"]{
+    &:before {
+      width: 99%;
+    }
+  }
+}
+
 .landscapeWrapper{
   @include flexCenter;
-  align-items: flex-start;
 
   div{
-    margin: 0 3% 0 0; 
+    margin: 0 3% 0 0;
 
     a img{
       margin-bottom: 9%;
