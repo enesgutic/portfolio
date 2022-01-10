@@ -1,0 +1,74 @@
+@import './mixins';
+@import './variables';
+
+.contactWrapper {
+  @include flexStart;
+
+  .contactInfo {
+    width: 40%;
+    margin-right: 5%;
+    
+    h2 {
+      margin-top: 0;
+    }
+    .wrapInfo{
+      margin-top: 3rem;
+
+      h4 {
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: .5rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .contactForm {
+    width: 60%;
+    padding: 0 20px;
+    
+    form{
+      
+      .formBody {
+        @include flexStart;
+        flex-direction: column;
+        width: 100%;
+
+        div {
+          width: 100%;
+
+          input, textarea {
+            width: 100%;
+            font-family: $headerFont;
+            font-size: 1rem;
+            padding: 10px 12px;
+            border: 1px solid $textColor;
+          }
+        }
+
+        div:not(:first-of-type) {
+          margin-top: 1rem;
+        }
+
+        input[type=submit] {
+          width: 25%;
+          padding: 15px 30px;
+          margin-top: 1rem;
+          background-color: $backgroundColor;
+          border: 1px solid $textColor;
+          font-size: 1rem;
+          transition: all .3s ease-in-out;
+        }
+
+        input[type=submit]:hover{
+          background-color: $textColor;
+          color: $backgroundColor;
+          cursor: pointer;
+        }
+      } // END .formBody
+    } // END form
+  } // END .contactForm
+
+} // END .contactWrapper

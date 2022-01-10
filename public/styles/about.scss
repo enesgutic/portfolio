@@ -1,8 +1,8 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
 .aboutWrap {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  height: 700px;
+  @include flexStart;
 
   .aboutImage {
     margin-right: 4%;
@@ -17,15 +17,15 @@
     width: 62%;
 
     .aboutName{
-      display: flex;
-      justify-content: flex-start;
+      @include flexStart;
+      // display: flex;
+      // justify-content: flex-start;
       flex-direction: column;
     }
 
     h2 {
       font-size: 2rem;
       margin: 0;
-      padding: 0;
     }
     
     .wrapSpan {
@@ -74,8 +74,8 @@
       transition: all .3s ease-in-out;
     }
     *:hover{
-      background-color: #252525;
-      color: #fafafa;
+      background-color: $textColor;
+      color: $backgroundColor;
     }
   }
 } // END .workWithMe

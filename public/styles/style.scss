@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
 @import url('../../node_modules/lightbox2/dist/css/lightbox.css');
-
-$backgroundColor: #fafafa;
-$textColor: #252525;
-$headerFont: 'Lato', sans-serif;
-$bodyFont: 'Merriweather', serif;
+@import './mixins';
+@import './variables';
 
 body {
   margin: 0;
@@ -14,11 +11,9 @@ body {
   font-family: $bodyFont;
   font-size: 16px;
   line-height: 1.5;
-
   background-color: $backgroundColor;
   color: $textColor;
-
-  padding-left: 330.66px;
+  padding-left: 329.19px;
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -54,8 +49,8 @@ body {
       
     }
 
-    h1 {
-      font-size: 2.7rem;
+    h1.pageName {
+      font-size: 2.5rem;
       text-align: center;
       margin-bottom: 3rem;
       font-family: $headerFont;
@@ -65,9 +60,7 @@ body {
     ul.menu {
       display: flex;
       flex-direction: column;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      @include resetList;
 
       
       li {
@@ -144,9 +137,10 @@ body {
     padding: 20px;
 
     div.galleryPhoto {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      @include flexCenter;
       flex-wrap: wrap;
     }
 
