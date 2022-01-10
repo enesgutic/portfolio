@@ -4,6 +4,9 @@
 @import './mixins';
 @import './variables';
 
+.hidden{
+  display: none;
+}
 body {
   margin: 0;
   box-sizing: border-box;

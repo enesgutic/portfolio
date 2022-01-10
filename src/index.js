@@ -5,6 +5,7 @@ import '../public/styles/_variables.scss'
 import '../public/styles/style.scss'
 import '../public/styles/about.scss'
 import '../public/styles/contact.scss'
+import '../public/styles/landscape.scss'
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
@@ -19,6 +20,9 @@ jQuery(() => {
     'alwaysShowNavOnTouchDevices': true
   })
 
+  
+
+
   // Active link
 
 // $(document).ready(function(){
@@ -27,6 +31,7 @@ jQuery(() => {
 //     $(this).addClass("active");
 // })
 // })
+
 
 }) // END jQuery
 

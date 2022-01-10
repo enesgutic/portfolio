@@ -1,0 +1,23 @@
+@import './mixins';
+@import './variables';
+
+.landscapeWrapper{
+  @include flexCenter;
+  align-items: flex-start;
+
+  div{
+    margin: 0 3% 0 0; 
+
+    a img{
+      margin-bottom: 9%;
+    }
+  }
+
+  div:nth-child(2){
+    padding-top: 150px;
+  }
+  
+  div:last-of-type{
+    padding-top: 50px;
+  }
+}
