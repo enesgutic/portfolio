@@ -20,7 +20,10 @@ jQuery(() => {
     'alwaysShowNavOnTouchDevices': true
   })
 
-  
+  // OnLoad FadeIn website
+  $(document).ready(function () {
+    $('.hidden').fadeIn(1600).removeClass('hidden');
+  });
 
 
   // Active link
