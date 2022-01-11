@@ -2,10 +2,13 @@
 @import './_variables.scss';
 
 body {
-  &.about .headerWrapper header ul li a[href*="about"]{
+  &.about .headerWrapper header ul li a[href*="about"] {
     &:before {
       width: 99%;
     }
+  }
+  &.about .mobileNavWrapper ul li a[href*="about"] {
+    text-decoration: underline
   }
 }
 
@@ -66,7 +69,7 @@ body {
       content: ' •';
     }
 
-    .aboutContent{
+    .aboutContent {
       display: flex;
       justify-content: center;
 
@@ -74,15 +77,18 @@ body {
         flex-direction: column;
       }
     }
-    .wrapFirstRow{
+    .wrapFirstRow {
       margin-right: 3%;
 
+      @media screen and (max-width: $breakpoint-md) {
+        margin-right: 0;
+      }
       @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-custom) {
         width: 100%;
       }
     }
 
-    .wrapSecondRow{
+    .wrapSecondRow {
 
       @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-custom) {
         width: 100%;
@@ -104,14 +110,14 @@ body {
   }
 } // END .aboutWrap bracket
 
-.workWithMe{
+.workWithMe {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
   margin: 10% 0 5% 0;
 
-  p:first-of-type, p:last-of-type{
+  p:first-of-type, p:last-of-type {
     width: 50%;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
@@ -125,7 +131,7 @@ body {
     }
   }
 
-  p:last-of-type{
+  p:last-of-type {
     
     *{
       padding: 15px 30px;
@@ -138,7 +144,7 @@ body {
         padding: 10px 20px;
       }
     }
-    *:hover{
+    *:hover {
       background-color: $textColor;
       color: $backgroundColor;
     }

@@ -31,6 +31,9 @@ body {
       width: 99%;
     }
   }
+  &.street .mobileNavWrapper ul li a[href*="index"]{
+    text-decoration: underline
+  }
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -195,7 +198,7 @@ body {
       }
       
       @media screen and (max-width: $breakpoint-md){
-        width: 100%;
+        width: 80%;
         margin: 0 0 3% 0;
       }
 

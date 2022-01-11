@@ -27,23 +27,17 @@ jQuery(() => {
   $('.hidden').fadeIn(1600).removeClass('hidden');
   
   // Show mobile navigation
-  $(".burgerMenu").on("click", () => {  //use a class, since your ID gets mangled
+  $(".burgerMenu").on("click", () => { 
     $('.mobileHeader').addClass("show");
+    // Scroll lock when mobile menu open
     $('body').addClass("scrollLock");
   })
 
   // Exit mobile navigation
-  $(".burgerMenuExit").on("click", () => {  //use a class, since your ID gets mangled
+  $(".burgerMenuExit").on("click", () => { 
     $('.mobileHeader').removeClass("show");
     $('body').removeClass("scrollLock");
   })
-
-
-  // $( ".burgerMenu" ).on("click", () => {
-  //   $( ".show" ).easeIn( "slow", function() {
-  //     // Animation complete.
-  //   });
-  // });
 
 }) // END jQuery
 

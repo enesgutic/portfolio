@@ -2,10 +2,13 @@
 @import './variables';
 
 body {
-  &.contact .headerWrapper header ul li a[href*="contact"]{
+  &.contact .headerWrapper header ul li a[href*="contact"] {
     &:before {
       width: 99%;
     }
+  }
+  &.contact .mobileNavWrapper ul li a[href*="contact"] {
+    text-decoration: underline
   }
 }
 
@@ -23,7 +26,7 @@ body {
         text-align: center;
       }
     }
-    .wrapInfo{
+    .wrapInfo {
       margin-top: 3rem;
 
       h4 {
