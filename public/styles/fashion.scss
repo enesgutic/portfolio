@@ -28,7 +28,7 @@ body {
       }
       @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
         order: 8;
-        width: 46.33%;
+        width: 100%;
       }
     }
 
@@ -42,6 +42,13 @@ body {
 
       @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
         width: 46.33%;
+      }
+    }
+    
+    &:nth-child(8){
+
+      @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+        width: 100%;
       }
     }
     
