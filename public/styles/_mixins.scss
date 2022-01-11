@@ -21,7 +21,7 @@
   text-decoration: none;
 }
 
-@mixin borderSlideLinkBefore{
+@mixin borderSlideLinkBefore {
   position: absolute;
   content: '';
   left: 1px;

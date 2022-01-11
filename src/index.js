@@ -7,6 +7,7 @@ import '../public/styles/about.scss'
 import '../public/styles/contact.scss'
 import '../public/styles/landscape.scss'
 import '../public/styles/fashion.scss'
+import '../public/styles/mobileMenu.scss'
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
@@ -25,17 +26,24 @@ jQuery(() => {
   // OnLoad FadeIn website
   $('.hidden').fadeIn(1600).removeClass('hidden');
   
+  // Show mobile navigation
+  $(".burgerMenu").on("click", () => {  //use a class, since your ID gets mangled
+    $('.mobileHeader').addClass("show");
+    $('body').addClass("scrollLock");
+  })
+
+  // Exit mobile navigation
+  $(".burgerMenuExit").on("click", () => {  //use a class, since your ID gets mangled
+    $('.mobileHeader').removeClass("show");
+    $('body').removeClass("scrollLock");
+  })
 
 
-  // Active link
-
-// $(document).ready(function(){
-//   $('ul li a').click(function(){
-//     $('li a').removeClass("active");
-//     $(this).addClass("active");
-// })
-// })
-
+  // $( ".burgerMenu" ).on("click", () => {
+  //   $( ".show" ).easeIn( "slow", function() {
+  //     // Animation complete.
+  //   });
+  // });
 
 }) // END jQuery
 
