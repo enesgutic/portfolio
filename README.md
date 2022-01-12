@@ -10,7 +10,7 @@ The project is a simple portfolio, containing 5 pages of which three are image g
 ### Technologies
 
 The following are technologies used in this project:
-- HTML5 for the layout
+- [HTML5](https://html5.org/) for the layout
 - [Sass](https://sass-lang.com/) for styles (using scss syntax)
 - [jQuery](https://jquery.com/) for dynamic events
 - [Webpack](https://webpack.github.io/) for compilation
